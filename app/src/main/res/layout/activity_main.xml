@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.opilane.orienteerumisapp.MainActivity">
+
+
+    <TextView
+        android:id="@+id/kaardilegend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:text="@string/märgid"
+        android:textColor="#f000"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/aita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="33dp"
+        android:text="@string/aita"
+        android:onClick="aita"/>
+
+    <Button
+        android:id="@+id/kompass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/aita"
+        android:layout_alignBottom="@+id/aita"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/kompass"
+        android:onClick="kompass"/>
+
+    <ImageView
+        android:id="@+id/märgidPic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/kaardilegend"
+        android:scaleType="centerInside"
+        android:src="@drawable/legend" />
+</RelativeLayout>
