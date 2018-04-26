@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity  {
 
     TextView legend;
     Button aita, kompass;
-    ImageView märgid;
+    ImageView signs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,30 +25,24 @@ public class MainActivity extends AppCompatActivity  {
         legend = findViewById(R.id.kaardilegend);
         aita = findViewById(R.id.aita);
         kompass = findViewById(R.id.kompass);
-        märgid = findViewById(R.id.märgidPic);
-    }
+        signs = findViewById(R.id.märgidPic);
 
-    public void aita(View view) {
         aita.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), AitaActivity.class);
-                startActivity(intent);
-                finish();
+                startActivity(new Intent(MainActivity.this, AitaActivity.class));
 
             }
         });
-    }
-
-
-    public void kompass(View view) {
         kompass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), KompassActivity.class);
-                startActivity(intent);
-                finish();
+                startActivity(new Intent(MainActivity.this, KompassActivity.class));
             }
         });
     }
-}
+
+    }
+
+
+
